@@ -23,7 +23,7 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/emanager", "root", "");
             con.createStatement();
         } catch (ClassNotFoundException | SQLException ex) {

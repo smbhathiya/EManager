@@ -490,7 +490,7 @@ public class CreateAccount extends javax.swing.JFrame {
             if (epfno.getText().isEmpty()) {
                 JOptionPane.showMessageDialog(this, "Please Enter EPF Number");
             } else {
-                Class.forName("com.mysql.jdbc.Driver");
+                Class.forName("com.mysql.cj.jdbc.Driver");
                 sqlConn = DriverManager.getConnection(dataConn, username, password);
 
                 // Create a query to retrieve data based on epfno

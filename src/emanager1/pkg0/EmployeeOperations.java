@@ -800,7 +800,7 @@ public class EmployeeOperations extends javax.swing.JFrame {
 
                 JOptionPane.showMessageDialog(this, "Please fill in all fields.");
             } else {
-                Class.forName("com.mysql.jdbc.Driver");
+                Class.forName("com.mysql.cj.jdbc.Driver");
                 sqlConn = DriverManager.getConnection(dataConn, username, password);
 
                 pst = sqlConn.prepareStatement("INSERT INTO employeedata(epfno, name, contactno, email, gender, bankaccno, department, nic, address, salary, designation, bdate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
